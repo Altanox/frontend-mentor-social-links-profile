@@ -1,0 +1,107 @@
+:root {
+  --clr-primary: hsl(75, 94%, 57%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey: hsl(0, 0%, 20%);
+  --clr-dark-grey: hsl(0, 0%, 12%);
+  --clr-off-black: hsl(0, 0%, 8%);
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fs: 0.875rem;
+  --ff: 'Inter', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+image {
+  min-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-white);
+}
+
+/* This is only an utility class so that it 
+looks nice after loading the page, nothing 
+to do with the component itself */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-white);
+  padding: 2rem 5rem;
+  background-color: var(--clr-off-black);
+  height: 100vh;
+}
+
+.card {
+  margin: 0 auto;
+  font-size: var(--fs);
+  background-color: var(--clr-dark-grey);
+  color: var(--clr-white);
+  padding: 3em;
+  text-align: center;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 25rem;
+}
+
+.personal-info {
+  font-weight: var(--fw-600);
+}
+
+.personal-info > * {
+  margin-bottom: 1.2rem;
+}
+
+.personal-info__portrait {
+  border-radius: 1000vw;
+  width: 50%;
+  margin-bottom: 1em;
+}
+
+.personal-info__name {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.personal-info__location {
+  color: var(--clr-primary);
+  margin-bottom: 2em;
+}
+
+.socials-item {
+  font-weight: var(--fw-700);
+  padding: 1em;
+  background-color: var(--clr-grey);
+  border-radius: 8px;
+}
+
+.socials-item:hover,
+.socials-item:focus {
+  background-color: var(--clr-primary);
+  transition-delay: 50ms;
+  cursor: pointer;
+
+  a {
+    color: var(--clr-off-black);
+  }
+}
